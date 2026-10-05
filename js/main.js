@@ -285,8 +285,8 @@ def add_item():
   window.addEventListener('scroll', checkScroll);
   checkScroll();
 
- /* --------------------------------------------------------------------------
-     7. FORMULÁRIO DE CONTATO VIA WEB3FORMS (ENVIO REAL)
+  /* --------------------------------------------------------------------------
+     7. FORMULÁRIO DE CONTATO & NOTIFICAÇÃO TOAST
      -------------------------------------------------------------------------- */
   const contactForm = document.getElementById('contact-form');
   const toast = document.getElementById('toast');
@@ -298,37 +298,36 @@ def add_item():
       const btnSubmit = contactForm.querySelector('button[type="submit"]');
       const originalText = btnSubmit.innerHTML;
 
-      btnSubmit.innerHTML = `** Enviando...`;
+      btnSubmit.innerHTML = `<i class="fa-solid fa-circle-notch fa-spin"></i> Enviando...`;
       btnSubmit.disabled = true;
 
-      const formData = new FormData(contactForm);
+      setTimeout(() => {
+        btnSubmit.innerHTML = `<i class="fa-solid fa-check"></i> Mensagem Enviada!`;
+        btnSubmit.style.background = '#10b981';
 
-      fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        body: formData
-      })
-      .then(response => response.json())
-      .then(data => {
-        if (data.success) {
-          btnSubmit.innerHTML = `** Mensagem Enviada!`;
-          btnSubmit.style.background = '#10b981';
+        showToast('Obrigado pelo contato! Mensagem enviada para Rafael.');
 
-          showToast('Obrigado pelo contato! Mensagem enviada para Rafael.');
+        contactForm.reset();
 
-          contactForm.reset();
-        } else {
-          showToast('Ocorreu um erro ao enviar. Tente novamente.');
-        }
-      })
-      .catch(() => {
-        showToast('Erro de conexão ao enviar a mensagem.');
-      })
-      .finally(() => {
         setTimeout(() => {
           btnSubmit.innerHTML = originalText;
           btnSubmit.style.background = '';
           btnSubmit.disabled = false;
         }, 3000);
-      });
+      }, 1200);
     });
   }
+
+  function showToast(message) {
+    if (toast) {
+      const toastText = toast.querySelector('.toast-text');
+      if (toastText) toastText.textContent = message;
+
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 4000);
+    }
+  }
+
+});

@@ -1,0 +1,16 @@
+/* ==========================================================================
+   MAIN CSS INDEX
+   --------------------------------------------------------------------------
+   Este é o arquivo CSS principal que importa todos os módulos separados:
+   1. variables.css  -> Variáveis de cores, fontes, sombras e temas
+   2. base.css       -> Reset, estilos gerais e fundo em degradê
+   3. components.css -> Botões, cards glassmorphism, modal e chaveador de tema
+   4. sections.css   -> Header, Hero, Sobre, Habilidades, Projetos e Contato
+   5. animations.css -> Animações keyframes e scroll reveal
+   ========================================================================== */
+
+@import url('./variables.css');
+@import url('./base.css');
+@import url('./components.css');
+@import url('./sections.css');
+@import url('./animations.css');

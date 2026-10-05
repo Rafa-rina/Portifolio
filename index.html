@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rafael Fernandes Durães | Portfólio de Ciência da Computação</title>
+  <meta name="description" content="Portfólio profissional de Rafael Fernandes Durães. Estudante de Ciência da Computação (5º Semestre no CEUB). Desenvolvedor Python, C, JavaScript, Flask, PostgreSQL e Docker.">
+  
+  <!-- Google Fonts: Outfit & Fira Code -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- CSS MODULAR -->
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <!-- ==========================================
+       HEADER & NAVBAR
+       ========================================== -->
+  <header class="navbar" id="navbar">
+    <div class="container">
+      <a href="#hero" class="logo">
+        <span class="logo-code">&lt;Rafael/&gt;</span> Durães<span class="gradient-text">.dev</span>
+      </a>
+
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#hero" class="nav-link active">Início</a>
+        <a href="#about" class="nav-link">Sobre Mim</a>
+        <a href="#skills" class="nav-link">Habilidades</a>
+        <a href="#projects" class="nav-link">Projetos</a>
+        <a href="#experience" class="nav-link">Experiência</a>
+        <a href="#contact" class="nav-link">Contato</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Chaveador de Tema Claro / Escuro -->
+        <button class="theme-toggle-btn" id="theme-toggle" title="Alternar Tema Claro/Escuro" aria-label="Alternar Tema">
+          <svg class="theme-icon-sun" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+          </svg>
+          <svg class="theme-icon-moon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+          </svg>
+          <span id="theme-label">Modo Escuro</span>
+        </button>
+
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Abrir Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================
+         HERO SECTION
+         ========================================== -->
+    <section class="hero" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content reveal">
+          <div class="hero-badge">
+            <span class="hero-badge-pulse"></span>
+            <span>Busco Estágio em TI • Brasília - DF</span>
+          </div>
+
+          <h1 class="hero-title">
+            Rafael Fernandes <br>
+            <span class="gradient-text">Durães</span>
+          </h1>
+
+          <h2 class="hero-subtitle">
+            <span id="typing-text" class="typing-text"></span>
+          </h2>
+
+          <p class="hero-description">
+            Estudante do <strong>5º semestre de Ciência da Computação (CEUB)</strong> com vivência em suporte a sistemas corporativos, noções de processos (BPMN/Scrum) e desenvolvimento de projetos acadêmicos em Python, Flask, C, PostgreSQL e Docker.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">
+              <i class="fa-solid fa-code"></i> Ver Projetos Acadêmicos
+            </a>
+            <a href="Curr%C3%ADculo%20Rafael%20Fernandes%20Dur%C3%A3es%20-%20pdf.pdf" download class="btn btn-secondary">
+              <i class="fa-solid fa-file-arrow-down"></i> Baixar Currículo PDF
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <i class="fa-regular fa-envelope"></i> Contato
+            </a>
+          </div>
+
+          <div class="hero-socials">
+            <a href="https://github.com/Rafa-rina" target="_blank" class="hero-social-link" title="GitHub de Rafael Durães">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="mailto:fernandesrafael520@gmail.com" class="hero-social-link" title="E-mail">
+              <i class="fa-regular fa-envelope"></i>
+            </a>
+            <a href="tel:61985607012" class="hero-social-link" title="Telefone / WhatsApp">
+              <i class="fa-solid fa-phone"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Foto de Perfil & Badges do Hero -->
+        <div class="hero-visual reveal delay-2">
+          <div class="floating-badge floating-badge-1">
+            <i class="fa-solid fa-graduation-cap badge-icon"></i>
+            <span>5º Semestre • CEUB</span>
+          </div>
+
+          <div class="floating-badge floating-badge-2">
+            <i class="fa-solid fa-code badge-icon"></i>
+            <span>Estudante de Dev & TI</span>
+          </div>
+
+          <div class="avatar-container">
+            <div class="avatar-inner">
+              <img src="img/rafael.jpg" alt="Rafael Fernandes Durães" class="avatar-img">
+              <div class="avatar-overlay">
+                <span class="avatar-caption"><i class="fa-brands fa-github"></i> github.com/Rafa-rina</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SOBRE MIM (ABOUT SECTION)
+         ========================================== -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Perfil Profissional</span>
+          <h2 class="section-title">Sobre <span class="gradient-text">Rafael Durães</span></h2>
+          <p class="section-subtitle">Objetivo: Estágio em TI, Desenvolvimento de Software e Suporte a Sistemas.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="glass-card reveal">
+            <h3 style="font-size: 1.35rem; margin-bottom: 1rem; color: var(--text-main);">
+              <i class="fa-solid fa-user-gear" style="color: var(--primary);"></i> Resumo de Atuação
+            </h3>
+            <p class="about-text">
+              Com 20 anos e residente em <strong>Brasília - DF</strong>, possuo experiência prática com atendimento a usuários, suporte a sistemas corporativos (CPJ, Alpheratz, Fox), organização de rotinas operacionais e acompanhamento de fluxos de trabalho.
+            </p>
+            <p class="about-text">
+              Busco unir minha vivência em processos corporativos com o conhecimento teórico e prático em desenvolvimento de software (Python, C, JavaScript, PostgreSQL, Docker, Flask) adquiridos na faculdade de Ciência da Computação no <strong>CEUB</strong>.
+            </p>
+
+            <div class="about-highlights">
+              <div class="highlight-item">
+                <i class="fa-solid fa-circle-check highlight-icon"></i> Organização & Gestão de Prazos
+              </div>
+              <div class="highlight-item">
+                <i class="fa-solid fa-circle-check highlight-icon"></i> Raciocínio Lógico & Analítico
+              </div>
+              <div class="highlight-item">
+                <i class="fa-solid fa-circle-check highlight-icon"></i> Suporte a Usuários & Sistemas
+              </div>
+              <div class="highlight-item">
+                <i class="fa-solid fa-circle-check highlight-icon"></i> Proatividade & Adaptabilidade
+              </div>
+            </div>
+          </div>
+
+          <div class="about-card-stat reveal delay-2">
+            <div class="glass-card stat-box">
+              <div class="stat-number">5º</div>
+              <div class="stat-label">Semestre no CEUB</div>
+            </div>
+            <div class="glass-card stat-box">
+              <div class="stat-number">2028</div>
+              <div class="stat-label">Previsão de Conclusão</div>
+            </div>
+            <div class="glass-card stat-box">
+              <div class="stat-number">3+</div>
+              <div class="stat-label">Projetos de Dev (5º Sem)</div>
+            </div>
+            <div class="glass-card stat-box">
+              <div class="stat-number">2 Anos+</div>
+              <div class="stat-label">Experiência Operacional</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         HABILIDADES (SKILLS SECTION)
+         ========================================== -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Conhecimentos Técnicos</span>
+          <h2 class="section-title">Minhas <span class="gradient-text">Habilidades</span></h2>
+          <p class="section-subtitle">Tecnologias, linguagens de programação, bancos de dados e metodologias.</p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Categoria 1: Programação & Dev -->
+          <div class="glass-card reveal">
+            <h3 class="skill-category-title">
+              <i class="fa-solid fa-code skill-category-icon"></i> Programação & Desenvolv.
+            </h3>
+            <div class="skill-items">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Python & Flask</span>
+                  <span class="skill-percent">Prática Acadêmica</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="60%"></div>
+                </div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Linguagem C</span>
+                  <span class="skill-percent">Estrutura de Dados</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="55%"></div>
+                </div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">JavaScript, HTML5 & CSS3</span>
+                  <span class="skill-percent">Prática Acadêmica</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="60%"></div>
+                </div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">APIs REST & Operações CRUD</span>
+                  <span class="skill-percent">Em Aprendizado</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="50%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Categoria 2: Banco de Dados & Ferramentas -->
+          <div class="glass-card reveal delay-2">
+            <h3 class="skill-category-title">
+              <i class="fa-solid fa-database skill-category-icon"></i> Banco de Dados & Ferramentas
+            </h3>
+            <div class="skill-items">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">PostgreSQL & SQL</span>
+                  <span class="skill-percent">Conhecimento Acadêmico</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="55%"></div>
+                </div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Git & GitHub</span>
+                  <span class="skill-percent">Uso Prático / Básico</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="60%"></div>
+                </div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Docker & CI/CD</span>
+                  <span class="skill-percent">Iniciante / Estudando</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="40%"></div>
+                </div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Chrome Extensions & PWA</span>
+                  <span class="skill-percent">Projetos Acadêmicos</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="50%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Categoria 3: Processos, Gestão & Sistemas -->
+          <div class="glass-card reveal delay-3">
+            <h3 class="skill-category-title">
+              <i class="fa-solid fa-sitemap skill-category-icon"></i> Processos, Gestão & Operação
+            </h3>
+            <div class="skill-items">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">BPMN & Bizagi Modeler</span>
+                  <span class="skill-percent">Noções Básicas</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="50%"></div>
+                </div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Scrum & Kanban</span>
+                  <span class="skill-percent">Noções de Metodologia</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="55%"></div>
+                </div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Fundamentos ITIL & LGPD</span>
+                  <span class="skill-percent">Noções Teóricas</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="45%"></div>
+                </div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Sistemas Corporativos (CPJ, Alpheratz, Fox)</span>
+                  <span class="skill-percent">Vivência Operacional</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-progress="65%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         PROJETOS (PROJECTS SECTION)
+         ========================================== -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Portfólio Prático</span>
+          <h2 class="section-title">Projetos <span class="gradient-text">Acadêmicos</span></h2>
+          <p class="section-subtitle">Trabalhos desenvolvidos no 5º Semestre do curso de Ciência da Computação.</p>
+        </div>
+
+        <!-- Filtros de Projetos -->
+        <div class="filter-container reveal">
+          <button class="filter-btn active" data-filter="all">Todos</button>
+          <button class="filter-btn" data-filter="web">Aplicações Web / PWA</button>
+          <button class="filter-btn" data-filter="extension">Extensões</button>
+          <button class="filter-btn" data-filter="crud">Sistemas CRUD</button>
+        </div>
+
+        <!-- Grid de Projetos -->
+        <div class="projects-grid">
+          
+          <!-- Projeto 1: Link Saver Chrome Extension -->
+          <div class="glass-card project-card reveal" data-category="extension">
+            <div class="project-visual">
+              <span class="project-category-badge">Chrome Extension</span>
+              <svg class="project-svg-graphic" viewBox="0 0 200 120" fill="none">
+                <rect x="30" y="25" width="140" height="70" rx="6" fill="#1e293b" stroke="#6366f1" stroke-width="2" />
+                <path d="M45 45 L155 45" stroke="#475569" stroke-width="2" />
+                <circle cx="55" cy="35" r="3" fill="#ef4444" />
+                <circle cx="65" cy="35" r="3" fill="#eab308" />
+                <circle cx="75" cy="35" r="3" fill="#22c55e" />
+                <rect x="45" y="60" width="70" height="8" rx="2" fill="#6366f1" />
+                <rect x="45" y="74" width="100" height="6" rx="2" fill="#06b6d4" />
+              </svg>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Link Saver (Extensão Chrome)</h3>
+              <p class="project-desc">
+                Extensão de navegador desenvolvida no bootcamp para salvar e organizar links em tempo real com busca instantânea.
+              </p>
+              <div class="project-tags">
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Chrome Extension API</span>
+                <span class="tech-tag">Git/GitHub</span>
+              </div>
+              <div class="project-actions">
+                <a href="#" class="project-link open-modal-btn" data-proj-id="proj-1">
+                  Ver Detalhes <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="https://github.com/Rafa-rina/bootcamp2-chrome-ext-rafael" target="_blank" class="btn-icon" title="Repositório no GitHub">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Projeto 2: Rafa Restaurante Web -->
+          <div class="glass-card project-card reveal delay-2" data-category="web">
+            <div class="project-visual">
+              <span class="project-category-badge">Aplicação Web</span>
+              <svg class="project-svg-graphic" viewBox="0 0 200 120" fill="none">
+                <rect x="50" y="15" width="100" height="90" rx="8" fill="#1e293b" stroke="#06b6d4" stroke-width="2" />
+                <rect x="65" y="30" width="70" height="10" rx="3" fill="#06b6d4" />
+                <rect x="65" y="48" width="50" height="6" rx="2" fill="#94a3b8" />
+                <rect x="65" y="60" width="60" height="6" rx="2" fill="#94a3b8" />
+                <circle cx="100" cy="85" r="5" fill="#6366f1" />
+              </svg>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Rafa Restaurante (Web App)</h3>
+              <p class="project-desc">
+                Sistema web interativo para gerenciamento e pedidos de restaurante, aplicando conceitos de Frontend e Lógica.
+              </p>
+              <div class="project-tags">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">UI/UX</span>
+              </div>
+              <div class="project-actions">
+                <a href="#" class="project-link open-modal-btn" data-proj-id="proj-2">
+                  Ver Detalhes <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="https://github.com/Rafa-rina/Rafa-Restaurante" target="_blank" class="btn-icon" title="Repositório no GitHub">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Projeto 3: Sistema CRUD Web (Flask & PostgreSQL) -->
+          <div class="glass-card project-card reveal delay-3" data-category="crud">
+            <div class="project-visual">
+              <span class="project-category-badge">Flask & PostgreSQL</span>
+              <svg class="project-svg-graphic" viewBox="0 0 200 120" fill="none">
+                <ellipse cx="100" cy="35" rx="45" ry="12" fill="#6366f1" />
+                <path d="M55 35 v25 c0 6.6 20.1 12 45 12 s45 -5.4 45 -12 v-25" stroke="#6366f1" stroke-width="2" fill="none" />
+                <path d="M55 60 v25 c0 6.6 20.1 12 45 12 s45 -5.4 45 -12 v-25" stroke="#06b6d4" stroke-width="2" fill="none" />
+              </svg>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Sistema CRUD Web & Banco de Dados</h3>
+              <p class="project-desc">
+                Aplicação web para cadastro, consulta, alteração e remoção de dados utilizando Flask (Python) e banco PostgreSQL.
+              </p>
+              <div class="project-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Flask</span>
+                <span class="tech-tag">PostgreSQL</span>
+                <span class="tech-tag">SQL</span>
+              </div>
+              <div class="project-actions">
+                <a href="#" class="project-link open-modal-btn" data-proj-id="proj-3">
+                  Ver Detalhes <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="https://github.com/Rafa-rina" target="_blank" class="btn-icon" title="Perfil GitHub">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Projeto 4: Portfólio Hub Modular -->
+          <div class="glass-card project-card reveal delay-4" data-category="web">
+            <div class="project-visual">
+              <span class="project-category-badge">Portifolio Hub</span>
+              <svg class="project-svg-graphic" viewBox="0 0 200 120" fill="none">
+                <rect x="25" y="25" width="40" height="70" rx="4" fill="#6366f1" opacity="0.8" />
+                <rect x="75" y="25" width="40" height="70" rx="4" fill="#a855f7" opacity="0.8" />
+                <rect x="125" y="25" width="40" height="70" rx="4" fill="#06b6d4" opacity="0.8" />
+              </svg>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Portfólio Hub Modular</h3>
+              <p class="project-desc">
+                Website de apresentação profissional com arquitetura CSS dividida em 5 módulos e suporte a tema Claro/Escuro.
+              </p>
+              <div class="project-tags">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3 Modular</span>
+                <span class="tech-tag">JavaScript</span>
+              </div>
+              <div class="project-actions">
+                <a href="#" class="project-link open-modal-btn" data-proj-id="proj-4">
+                  Ver Detalhes <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="https://github.com/Rafa-rina/Portifolio-Hub" target="_blank" class="btn-icon" title="Repositório no GitHub">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         EXPERIÊNCIA PROFISSIONAL & JORNADA
+         ========================================== -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Trajetória</span>
+          <h2 class="section-title">Experiência <span class="gradient-text">Profissional & Acadêmica</span></h2>
+          <p class="section-subtitle">Minhas experiências em suporte administrativo, operação de sistemas e formação.</p>
+        </div>
+
+        <div class="timeline">
+          <!-- Item 1: CEUB (Graduação em Andamento) -->
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="glass-card">
+              <div class="timeline-date">2024 – Atual • Previsão Jul/2028</div>
+              <h3 class="timeline-title">Bacharelado em Ciência da Computação</h3>
+              <h4 class="timeline-subtitle">Centro Universitário de Brasília (CEUB) — 5º Semestre</h4>
+              <p class="timeline-desc">
+                • Formação em algoritmos, estrutura de dados, lógica e engenharia de software.<br>
+                • Projetos práticos em C, Python (Flask), PostgreSQL, Docker e desenvolvimento web.<br>
+                • Aprendizado de metodologias ágeis (Scrum, Kanban), BPMN e governança de TI.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 2: Dunice & Marcon -->
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="glass-card">
+              <div class="timeline-date">Jul/2024 – Jun/2026</div>
+              <h3 class="timeline-title">Assistente Administrativo e Operador</h3>
+              <h4 class="timeline-subtitle">Dunice & Marcon Advogados</h4>
+              <p class="timeline-desc">
+                • Apoio na organização e acompanhamento das rotinas diárias operacionais.<br>
+                • Distribuição de tarefas, controle de fluxo de trabalho e atendimento a prazos.<br>
+                • Operação de sistemas corporativos (CPJ, Alpheratz e Fox) e suporte a usuários.<br>
+                • Conferência e organização documental, resolução de demandas internas.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 3: N&N Assessoria -->
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="glass-card">
+              <div class="timeline-date">Mar/2023 – Jan/2024</div>
+              <h3 class="timeline-title">Estagiário Administrativo</h3>
+              <h4 class="timeline-subtitle">N&N Assessoria e Consultoria</h4>
+              <p class="timeline-desc">
+                • Organização de documentos, registros e fluxos operacionais.<br>
+                • Suporte no atendimento a usuários e acompanhamento de solicitações.<br>
+                • Registro e atualização de informações em sistemas internos.<br>
+                • Apoio na padronização de rotinas administrativas.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         CONTATO (CONTACT SECTION)
+         ========================================== -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Fale Comigo</span>
+          <h2 class="section-title">Entre em <span class="gradient-text">Contato</span></h2>
+          <p class="section-subtitle">Estou disponível para oportunidades de estágio e suporte em TI.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="glass-card reveal">
+            <h3 style="font-size: 1.3rem; margin-bottom: 1.5rem; color: var(--text-main);">Informações Rápidas</h3>
+            
+            <div class="contact-info-list">
+              <div class="contact-info-card">
+                <div class="contact-icon-box">
+                  <i class="fa-regular fa-envelope"></i>
+                </div>
+                <div>
+                  <div class="contact-label">E-mail Profissional</div>
+                  <div class="contact-val">fernandesrafael520@gmail.com</div>
+                </div>
+              </div>
+
+              <div class="contact-info-card">
+                <div class="contact-icon-box">
+                  <i class="fa-solid fa-phone"></i>
+                </div>
+                <div>
+                  <div class="contact-label">Telefone / WhatsApp</div>
+                  <div class="contact-val">(61) 98560-7012</div>
+                </div>
+              </div>
+
+              <div class="contact-info-card">
+                <div class="contact-icon-box">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div>
+                  <div class="contact-label">Localização</div>
+                  <div class="contact-val">Brasília - DF</div>
+                </div>
+              </div>
+
+              <div class="contact-info-card">
+                <div class="contact-icon-box">
+                  <i class="fa-brands fa-github"></i>
+                </div>
+                <div>
+                  <div class="contact-label">GitHub</div>
+                  <div class="contact-val">github.com/Rafa-rina</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Formulário -->
+          <div class="glass-card reveal delay-2">
+            <form id="contact-form" class="contact-form">
+              <div class="form-group">
+                <label for="name" class="form-label">Seu Nome</label>
+                <input type="text" id="name" class="form-input" placeholder="Digite seu nome completo" required>
+              </div>
+
+              <div class="form-group">
+                <label for="email" class="form-label">Seu E-mail</label>
+                <input type="email" id="email" class="form-input" placeholder="seuemail@exemplo.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="message" class="form-label">Mensagem / Proposta</label>
+                <textarea id="message" class="form-textarea" placeholder="Olá Rafael, gostaria de conversar sobre uma vaga..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.5rem;">
+                <i class="fa-regular fa-paper-plane"></i> Enviar Mensagem
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>&copy; 2026 Rafael Fernandes Durães. Ciência da Computação - CEUB.</p>
+      <p style="font-size: 0.82rem; color: var(--text-subtle);">
+        Desenvolvido com Arquitetura CSS Modular (5 arquivos) & JavaScript Vanilla.
+      </p>
+    </div>
+  </footer>
+
+  <!-- ==========================================
+       MODAL DE PROJETO
+       ========================================== -->
+  <div class="modal-overlay" id="project-modal">
+    <div class="modal-content">
+      <button class="modal-close-btn" id="modal-close" aria-label="Fechar Modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <span class="section-tag" id="modal-category" style="margin-bottom: 0.5rem;">Categoria</span>
+      <h3 id="modal-title" style="font-size: 1.6rem; color: var(--text-main); margin-bottom: 1rem;">Título do Projeto</h3>
+      <p id="modal-desc" style="color: var(--text-muted); margin-bottom: 1.5rem; line-height: 1.6;">Descrição detalhada do projeto.</p>
+      
+      <h4 style="font-size: 0.95rem; font-weight: 600; color: var(--text-main); margin-bottom: 0.5rem;">Tecnologias Utilizadas:</h4>
+      <div id="modal-tags" class="project-tags" style="margin-bottom: 1.5rem;"></div>
+
+      <h4 style="font-size: 0.95rem; font-weight: 600; color: var(--text-main); margin-bottom: 0.5rem;">Exemplo de Código / Configuração:</h4>
+      <pre style="background: var(--code-bg); padding: 1rem; border-radius: var(--radius-md); border: 1px solid var(--card-border); overflow-x: auto;"><code id="modal-code" style="font-family: var(--font-code); font-size: 0.85rem; color: var(--secondary);"></code></pre>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       TOAST NOTIFICATION
+       ========================================== -->
+  <div class="toast-container">
+    <div class="toast" id="toast">
+      <svg class="toast-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+      </svg>
+      <span class="toast-text">Mensagem enviada com sucesso!</span>
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="js/main.js"></script>
+</body>
+</html>

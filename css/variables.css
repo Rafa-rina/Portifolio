@@ -1,0 +1,100 @@
+/* ==========================================================================
+   VARIABLES & THEME TOKENS
+   --------------------------------------------------------------------------
+   Contém as variáveis globais do CSS para cores, temas (Claro/Escuro em degradê),
+   tipografia, espaçamentos, sombras e efeitos de glassmorphism.
+   ========================================================================== */
+
+:root {
+  /* Fonte Principal */
+  --font-primary: 'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-code: 'Fira Code', 'JetBrains Mono', monospace;
+
+  /* Transição de Tema */
+  --theme-transition: background 0.4s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+
+  /* =========================================
+     DARK THEME (Padrão) - Degradê Escuro Elegante
+     ========================================= */
+  --bg-gradient: linear-gradient(135deg, #090d16 0%, #101728 40%, #0f1c34 70%, #0a0e1a 100%);
+  --bg-gradient-fixed: fixed;
+  --card-bg: rgba(255, 255, 255, 0.04);
+  --card-bg-hover: rgba(255, 255, 255, 0.08);
+  --card-border: rgba(255, 255, 255, 0.08);
+  --card-border-hover: rgba(99, 102, 241, 0.4);
+  
+  --nav-bg: rgba(10, 14, 26, 0.75);
+  --nav-border: rgba(255, 255, 255, 0.08);
+
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --text-subtle: #64748b;
+
+  /* Cores de Destaque / Accent (Gradientes e Sólidos) */
+  --primary: #6366f1;         /* Indigo Neon */
+  --primary-hover: #4f46e5;
+  --primary-glow: rgba(99, 102, 241, 0.35);
+  
+  --secondary: #06b6d4;       /* Ciano Neon */
+  --secondary-glow: rgba(6, 182, 212, 0.35);
+
+  --accent-gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #06b6d4 100%);
+  --accent-gradient-hover: linear-gradient(135deg, #4f46e5 0%, #9333ea 50%, #0891b2 100%);
+  --text-gradient: linear-gradient(135deg, #818cf8 0%, #c084fc 50%, #38bdf8 100%);
+
+  /* Efeitos e Sombras */
+  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 10px 25px -5px rgba(0, 0, 0, 0.4), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 20px 35px -10px rgba(0, 0, 0, 0.5), 0 0 30px rgba(99, 102, 241, 0.2);
+  --glass-backdrop: blur(16px) saturate(180%);
+
+  --modal-bg: rgba(15, 23, 42, 0.92);
+  --code-bg: rgba(15, 23, 42, 0.75);
+}
+
+/* =========================================
+   LIGHT THEME - Degradê Claro com Tons Suaves
+   ========================================= */
+[data-theme="light"] {
+  --bg-gradient: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 40%, #e0e7ff 70%, #f8fafc 100%);
+  --card-bg: rgba(255, 255, 255, 0.65);
+  --card-bg-hover: rgba(255, 255, 255, 0.9);
+  --card-border: rgba(99, 102, 241, 0.12);
+  --card-border-hover: rgba(99, 102, 241, 0.5);
+
+  --nav-bg: rgba(248, 250, 252, 0.8);
+  --nav-border: rgba(99, 102, 241, 0.15);
+
+  --text-main: #0f172a;
+  --text-muted: #475569;
+  --text-subtle: #64748b;
+
+  --primary: #4f46e5;
+  --primary-hover: #4338ca;
+  --primary-glow: rgba(79, 70, 229, 0.25);
+
+  --secondary: #0891b2;
+  --secondary-glow: rgba(8, 145, 178, 0.25);
+
+  --accent-gradient: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #0891b2 100%);
+  --accent-gradient-hover: linear-gradient(135deg, #4338ca 0%, #6d28d9 50%, #0e7490 100%);
+  --text-gradient: linear-gradient(135deg, #4338ca 0%, #6d28d9 50%, #0e7490 100%);
+
+  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 10px 25px -5px rgba(99, 102, 241, 0.12), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 20px 35px -10px rgba(99, 102, 241, 0.2), 0 0 20px rgba(99, 102, 241, 0.15);
+  --glass-backdrop: blur(16px) saturate(180%);
+
+  --modal-bg: rgba(255, 255, 255, 0.95);
+  --code-bg: rgba(241, 245, 249, 0.9);
+}
+
+/* Espaçamentos e Border-Radius Globais */
+:root {
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+
+  --container-max-width: 1140px;
+}

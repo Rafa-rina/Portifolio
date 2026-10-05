@@ -6,22 +6,16 @@
   <title>Rafael Fernandes Durães | Portfólio de Ciência da Computação</title>
   <meta name="description" content="Portfólio profissional de Rafael Fernandes Durães. Estudante de Ciência da Computação (5º Semestre no CEUB). Desenvolvedor Python, C, JavaScript, Flask, PostgreSQL e Docker.">
   
-  <!-- Google Fonts: Outfit & Fira Code -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   
-  <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   
-  <!-- CSS MODULAR -->
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 
-  <!-- ==========================================
-       HEADER & NAVBAR
-       ========================================== -->
   <header class="navbar" id="navbar">
     <div class="container">
       <a href="#hero" class="logo">
@@ -38,7 +32,6 @@
       </nav>
 
       <div class="nav-actions">
-        <!-- Chaveador de Tema Claro / Escuro -->
         <button class="theme-toggle-btn" id="theme-toggle" title="Alternar Tema Claro/Escuro" aria-label="Alternar Tema">
           <svg class="theme-icon-sun" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
@@ -57,9 +50,6 @@
   </header>
 
   <main>
-    <!-- ==========================================
-         HERO SECTION
-         ========================================== -->
     <section class="hero" id="hero">
       <div class="container hero-grid">
         <div class="hero-content reveal">
@@ -106,7 +96,6 @@
           </div>
         </div>
 
-        <!-- Foto de Perfil & Badges do Hero -->
         <div class="hero-visual reveal delay-2">
           <div class="floating-badge floating-badge-1">
             <i class="fa-solid fa-graduation-cap badge-icon"></i>
@@ -130,9 +119,6 @@
       </div>
     </section>
 
-    <!-- ==========================================
-         SOBRE MIM (ABOUT SECTION)
-         ========================================== -->
     <section class="section" id="about">
       <div class="container">
         <div class="section-header reveal">
@@ -191,9 +177,6 @@
       </div>
     </section>
 
-    <!-- ==========================================
-         HABILIDADES (SKILLS SECTION)
-         ========================================== -->
     <section class="section" id="skills">
       <div class="container">
         <div class="section-header reveal">
@@ -299,7 +282,6 @@
             </div>
           </div>
 
-          <!-- Categoria 3: Processos, Gestão & Sistemas -->
           <div class="glass-card reveal delay-3">
             <h3 class="skill-category-title">
               <i class="fa-solid fa-sitemap skill-category-icon"></i> Processos, Gestão & Operação
@@ -350,9 +332,6 @@
       </div>
     </section>
 
-    <!-- ==========================================
-         PROJETOS (PROJECTS SECTION)
-         ========================================== -->
     <section class="section" id="projects">
       <div class="container">
         <div class="section-header reveal">
@@ -360,8 +339,6 @@
           <h2 class="section-title">Projetos <span class="gradient-text">Acadêmicos</span></h2>
           <p class="section-subtitle">Trabalhos desenvolvidos no 5º Semestre do curso de Ciência da Computação.</p>
         </div>
-
-        <!-- Filtros de Projetos -->
         <div class="filter-container reveal">
           <button class="filter-btn active" data-filter="all">Todos</button>
           <button class="filter-btn" data-filter="web">Aplicações Web / PWA</button>
@@ -629,35 +606,33 @@
           </div>
 
           <!-- Formulário -->
-<div class="glass-card reveal delay-2">
-  <form action="https://api.web3forms.com/submit" method="POST"  class="contact-form">
-    <!-- Chave de acesso do Web3Forms -->
-    <input type="hidden" name="access_key" value="143c2de3-9e3e-4b91-8b06-23852bf7bbf1">
+          <div class="glass-card reveal delay-2">
+            <form id="contact-form" class="contact-form">
+              <div class="form-group">
+                <label for="name" class="form-label">Seu Nome</label>
+                <input type="text" id="name" class="form-input" placeholder="Digite seu nome completo" required>
+              </div>
 
-    <div class="form-group">
-      <label for="name" class="form-label">Seu Nome</label>
-      <input type="text" id="name" name="name" class="form-input" placeholder="Digite seu nome completo" required>
-    </div>
+              <div class="form-group">
+                <label for="email" class="form-label">Seu E-mail</label>
+                <input type="email" id="email" class="form-input" placeholder="seuemail@exemplo.com" required>
+              </div>
 
-    <div class="form-group">
-      <label for="email" class="form-label">Seu E-mail</label>
-      <input type="email" id="email" name="email" class="form-input" placeholder="seuemail@exemplo.com" required>
-    </div>
+              <div class="form-group">
+                <label for="message" class="form-label">Mensagem / Proposta</label>
+                <textarea id="message" class="form-textarea" placeholder="Olá Rafael, gostaria de conversar sobre uma vaga..." required></textarea>
+              </div>
 
-    <div class="form-group">
-      <label for="message" class="form-label">Mensagem / Proposta</label>
-      <textarea id="message" name="message" class="form-textarea" placeholder="Olá Rafael, gostaria de conversar sobre uma vaga..." required></textarea>
-    </div>
+              <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.5rem;">
+                <i class="fa-regular fa-paper-plane"></i> Enviar Mensagem
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.5rem;">
-      <i class="fa-regular fa-paper-plane"></i> Enviar Mensagem
-    </button>
-  </form>
-</div>
-</div>
-</div>
-</section>
-</main>
   <!-- ==========================================
        FOOTER
        ========================================== -->

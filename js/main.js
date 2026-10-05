@@ -285,8 +285,8 @@ def add_item():
   window.addEventListener('scroll', checkScroll);
   checkScroll();
 
-  /* --------------------------------------------------------------------------
-     7. FORMULÁRIO DE CONTATO & NOTIFICAÇÃO TOAST
+ /* --------------------------------------------------------------------------
+     7. FORMULÁRIO DE CONTATO VIA WEB3FORMS (ENVIO REAL)
      -------------------------------------------------------------------------- */
   const contactForm = document.getElementById('contact-form');
   const toast = document.getElementById('toast');
@@ -298,23 +298,38 @@ def add_item():
       const btnSubmit = contactForm.querySelector('button[type="submit"]');
       const originalText = btnSubmit.innerHTML;
 
-      btnSubmit.innerHTML = `<i class="fa-solid fa-circle-notch fa-spin"></i> Enviando...`;
+      btnSubmit.innerHTML = `** Enviando...`;
       btnSubmit.disabled = true;
 
-      setTimeout(() => {
-        btnSubmit.innerHTML = `<i class="fa-solid fa-check"></i> Mensagem Enviada!`;
-        btnSubmit.style.background = '#10b981';
+      const formData = new FormData(contactForm);
 
-        showToast('Obrigado pelo contato! Mensagem enviada para Rafael.');
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.success) {
+          btnSubmit.innerHTML = `** Mensagem Enviada!`;
+          btnSubmit.style.background = '#10b981';
 
-        contactForm.reset();
+          showToast('Obrigado pelo contato! Mensagem enviada para Rafael.');
 
+          contactForm.reset();
+        } else {
+          showToast('Ocorreu um erro ao enviar. Tente novamente.');
+        }
+      })
+      .catch(() => {
+        showToast('Erro de conexão ao enviar a mensagem.');
+      })
+      .finally(() => {
         setTimeout(() => {
           btnSubmit.innerHTML = originalText;
           btnSubmit.style.background = '';
           btnSubmit.disabled = false;
         }, 3000);
-      }, 1200);
+      });
     });
   }
 
